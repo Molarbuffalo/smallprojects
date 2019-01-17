@@ -1,15 +1,17 @@
  #!/usr/bin/python
  # -*- coding: utf-8 -*-
 import os
+import time
 
 def main():
+
     print '\033[95m[1] Addition'
     print '\033[95m[2] Subtraction'
     print '\033[95m[3] Multiplication'
     print '\033[95m[4] Division'
     print '\033[95m[5] Exit'
 
-    option = input('~~>')
+    option = input('~~> ')
 
     if option == 1:
         os.system('cls || clear')
@@ -38,6 +40,7 @@ def main():
 
         print('{0} × {1} = {2}' .format(MultiplicationNumb1, MultiplicationNumb2, multiplicationAnswer))
 
+
     if option == 4:
         os.system('cls || clear')
         print '\033[93m[ Division ]'
@@ -49,6 +52,18 @@ def main():
 
     if option == 5:
         os.system('cls || clear')
-        print '\033[93m[ EXIT ]'
+        print '\033[94m=== [ EXIT ] ==='
+        print '\033[93mYou have exited'
+        print '\033[93mthe calculator'
+        print '\033[93mby Molarbuffalo'
+        print '\033[94m==============='
         exit()
+
+    else:
+        os.system('cls || clear')
+        print '\033[96mChoice not found!'
+        print '\033[96mTerminating Calculator'
+        time.sleep(3)
+        exit()
+
 main()
